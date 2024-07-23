@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{cite}
+
+%\addbibresource{ref.bib}
+
+\makeatletter
+\newcommand{\myfnsymbol}[1]{%
+  \expandafter\@myfnsymbol\csname c@#1\endcsname
+}
+% Mapping of how the \thanks symbols will be interpreted sequentially
+\newcommand{\@myfnsymbol}[1]{%
+  \ifcase #1
+    % 0
+  \or 1% 1
+  \or 2% 2
+  \or 3% 3
+  \or \TextOrMath{\textasteriskcentered}{*}% 4
+  \or \TextOrMath{\textdagger}{\dagger}% 5
+  \fi
+}
+% Just to make things explicit in the code what it means
+\newcommand{\affiliationA}{\@myfnsymbol{1}}
+\newcommand{\affiliationB}{\@myfnsymbol{2}}
+\newcommand{\affiliationC}{\@myfnsymbol{3}}
+\newcommand{\equalcontributor}{\@myfnsymbol{4}}
+\newcommand{\correspondingA}{\@myfnsymbol{5}}
+\makeatother
+
+\title{\textbf{Estimating the Influence of Demographic Ageing and Migration to the Spanish Aggregate Labour Supply}}
+
+\author{
+  Gilbert Montcho\textsuperscript{\affiliationA,\equalcontributor},
+  Alejandro Steven Fonseca-Zendejas\textsuperscript{\affiliationB,\equalcontributor,\correspondingA},
+  Marcel Mérrete\textsuperscript{\affiliationC,\equalcontributor}
+}
+
+\begin{document}
+
+
+\renewcommand{\thefootnote}{\myfnsymbol{footnote}}
+\maketitle
+% Layout the \thanks notes in the order you want
+\footnotetext[1]{Department of Demography, University of Montreal, Montreal, Quebec, Canada}%
+\footnotetext[2]{Department of Economics, Universidad Loyola Andalucía, Seville, Spain}%
+\footnotetext[3]{Department of Economics, University of Ottawa, Ontario, Canada}%
+\footnotetext[4]{All authors contributed equally}%
+\footnotetext[5]{Corresponding author: asfonseca@uloyola.es}%
+
+\setcounter{footnote}{0}% Restart footnote counter
+% Footnotes for rest of document uses \fnsymbol 
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{abstract}
+    
+\end{abstract}
+
+\section*{Introduction}
+
+Across the countries of Western Europe, Spain is a representative case that exhibits two major phenomena that currently concern policymakers: population ageing and immigrant inflows. These conditions result in several economic and social outcomes. From an initial standpoint, it is widely recognized that there are side-effects to an ageing society, which are evident in social security finances under substantial stress affecting PAYG systems \cite{ diaz2009delaying,boeri2024pay}, increments in public expenditure on health services \cite{cristea2020impact, aiyar2016impact, bijak2007population}, and social security \cite{failde2021perspective}. Furthermore, the ageing population impacts the labour market as there exist a decline in labour force \cite{maestas2023effect}. Concerning the labour market in Spain, \cite{casares2018labor}, demonstrated that labour force shocks are more persistent, and this labour force growth can be explained by separate factors and one such factor is the influx of a substantial number of non-EU immigrants. This suggest that immigration influences the Spanish aggregate labour supply besides the age structure of the population. \\
+
+As a result, several investigations have suggested that replacement migration is proposed as a strategy to alleviate the effects of ageing because it assists in easing downturns in labour supply, boost competitiveness and fosters economic growth \cite{stepanek2022sectoral, okamoto2021immigration, UNATIONS}. However, the expansion of working population and, therefore, the increase in public revenues, migration also creates additional needs for public services. Consequently, migration affects both the tax and the welfare system \cite{fiorio2023migration, naumann2021population}. For example, as stated in \cite{ preston2014effect},immigration can result in costs by the utilization of public services but can also influence the expense of offering services to natives. Having said that, in developing countries, extended individual longevity or population ageing and migration are among the most significant challenges \cite{ciobanu2020intersections}. \\
+
+As summarized previously, the impacts of population ageing, and migration are multifaceted, and an all-encompassing solution does not address every situation. Therefore, handling these matters requires a targeted approach. As a result of this, an examination of the combined effects and potential benefits on the aggregate labour supply by demographic ageing is carried out in this paper. This analysis is conducted understanding that demographic ageing is driven by joint effects of fertility rates, mortality rates, and, certainly, immigration patterns. Thus, it becomes feasible to estimate the aggregate labour supply and analyse the impact of immigration in Spain over time. 
+
+
+
+\section*{Origins and Status of Immigration and Ageing in Spain}
+
+
+\section*{Assessment of Aggregate Labour Supply (Methodology)}
+
+
+\section*{Results}
+
+\section*{Discussion and Closing Remarks}
+
+\bibliographystyle{apalike}
+\bibliography{ref}
+
+
+
+
+\end{document}
