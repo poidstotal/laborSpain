@@ -2,13 +2,13 @@
 \usepackage[a4paper,margin=1in]{geometry}
 \usepackage{cite}
 
-%\addbibresource{ref.bib}
+
 
 \makeatletter
 \newcommand{\myfnsymbol}[1]{%
   \expandafter\@myfnsymbol\csname c@#1\endcsname
 }
-% Mapping of how the \thanks symbols will be interpreted sequentially
+% Mapping of how the symbols will be interpreted sequentially
 \newcommand{\@myfnsymbol}[1]{%
   \ifcase #1
     % 0
@@ -19,7 +19,7 @@
   \or \TextOrMath{\textdagger}{\dagger}% 5
   \fi
 }
-% Just to make things explicit in the code what it means
+
 \newcommand{\affiliationA}{\@myfnsymbol{1}}
 \newcommand{\affiliationB}{\@myfnsymbol{2}}
 \newcommand{\affiliationC}{\@myfnsymbol{3}}
@@ -40,7 +40,8 @@
 
 \renewcommand{\thefootnote}{\myfnsymbol{footnote}}
 \maketitle
-% Layout the \thanks notes in the order you want
+
+% Layout the notes in order
 \footnotetext[1]{Department of Demography, University of Montreal, Montreal, Quebec, Canada}%
 \footnotetext[2]{Department of Economics, Universidad Loyola Andalucía, Seville, Spain}%
 \footnotetext[3]{Department of Economics, University of Ottawa, Ontario, Canada}%
@@ -62,8 +63,6 @@ Across the countries of Western Europe, Spain is a representative case that exhi
 As a result, several investigations have suggested that replacement migration is proposed as a strategy to alleviate the effects of ageing because it assists in easing downturns in labour supply, boost competitiveness and fosters economic growth \cite{stepanek2022sectoral, okamoto2021immigration, UNATIONS}. However, the expansion of working population and, therefore, the increase in public revenues, migration also creates additional needs for public services. Consequently, migration affects both the tax and the welfare system \cite{fiorio2023migration, naumann2021population}. For example, as stated in \cite{ preston2014effect},immigration can result in costs by the utilization of public services but can also influence the expense of offering services to natives. Having said that, in developing countries, extended individual longevity or population ageing and migration are among the most significant challenges \cite{ciobanu2020intersections}. \\
 
 As summarized previously, the impacts of population ageing, and migration are multifaceted, and an all-encompassing solution does not address every situation. Therefore, handling these matters requires a targeted approach. As a result of this, an examination of the combined effects and potential benefits on the aggregate labour supply by demographic ageing is carried out in this paper. This analysis is conducted understanding that demographic ageing is driven by joint effects of fertility rates, mortality rates, and, certainly, immigration patterns. Thus, it becomes feasible to estimate the aggregate labour supply and analyse the impact of immigration in Spain over time. 
-
-
 
 \section*{Origins and Status of Immigration and Ageing in Spain}
 
