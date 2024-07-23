@@ -1,0 +1,81 @@
+\documentclass{article}
+\input{./src/pre.tex}
+
+
+\makeatletter
+\newcommand{\myfnsymbol}[1]{%
+  \expandafter\@myfnsymbol\csname c@#1\endcsname
+}
+% Mapping of how the symbols will be interpreted sequentially
+\newcommand{\@myfnsymbol}[1]{%
+  \ifcase #1
+    % 0
+  \or 1% 1
+  \or 2% 2
+  \or 3% 3
+  \or \TextOrMath{\textasteriskcentered}{*}% 4
+  \or \TextOrMath{\textdagger}{\dagger}% 5
+  \fi
+}
+
+\newcommand{\affiliationA}{\@myfnsymbol{1}}
+\newcommand{\affiliationB}{\@myfnsymbol{2}}
+\newcommand{\affiliationC}{\@myfnsymbol{3}}
+\newcommand{\equalcontributor}{\@myfnsymbol{4}}
+\newcommand{\correspondingA}{\@myfnsymbol{5}}
+\makeatother
+
+\title{\textbf{Estimating the Influence of Demographic Ageing and Migration to the Spanish Aggregate Labour Supply}}
+
+\author{
+  Gilbert Montcho\textsuperscript{\affiliationA,\equalcontributor},
+  Alejandro Steven Fonseca-Zendejas\textsuperscript{\affiliationB,\equalcontributor,\correspondingA},
+  Marcel Mérrete\textsuperscript{\affiliationC,\equalcontributor}
+}
+
+\begin{document}
+
+
+\renewcommand{\thefootnote}{\myfnsymbol{footnote}}
+\maketitle
+
+% Layout the notes in order
+\footnotetext[1]{Department of Demography, University of Montreal, Montreal, Quebec, Canada}%
+\footnotetext[2]{Department of Economics, Universidad Loyola Andalucía, Seville, Spain}%
+\footnotetext[3]{Department of Economics, University of Ottawa, Ontario, Canada}%
+\footnotetext[4]{All authors contributed equally}%
+\footnotetext[5]{Corresponding author: asfonseca@uloyola.es}%
+
+\setcounter{footnote}{0}% Restart footnote counter
+% Footnotes for rest of document uses \fnsymbol 
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\input{./chapts/0abstract}
+\newpage
+  % show table of content on esparate page
+  {\fontsize{13pt}{13}
+    \selectfont
+      \tableofcontents
+  }
+  
+  % load content
+  \newpage
+
+%%%%%%%%%%%%%%%%%%%%
+\input{./chapts/1intro}
+\input{./chapts/2methods}
+\input{./chapts/3result}
+\input{./chapts/4outro}
+
+
+
+
+
+
+
+% reference
+\section*{Réferences}
+%\addcontentsline{toc}{section}{References}
+\printbibliography[heading=none]
+
+\end{document}

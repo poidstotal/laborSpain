@@ -1,6 +1,8 @@
 ## this file will contain code to generage base data for analysis. Please do not include location settings.
 
-
+################################################
+## Initial Data processing
+################################################
 
 data <- read_excel("./data/Data.xlsx" )
 data <-  as.data.table(data)
@@ -24,11 +26,15 @@ data[age  == "55+", ageg := "Older(55+)"]
 data[, whx := 50*whx]
 # total labour
 data[, lab := whx*wpx*pop]
-labdta <- data[, .(lab = sum(lab)), by = .(year, ageg, sex, img)]
-# add lines for total male and female
-labdta <- rbind(labdta[, .(lab = sum(lab), sex = "Total"), by = .(year, ageg, img)], labdta)
-
+## save for later use
 saveRDS(labdta, "./data/labdta.rds")
+
+
+
+
+
+
+
 
 
 

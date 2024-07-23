@@ -1,0 +1,92 @@
+% Load Package
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{pgffor}
+\usepackage{color}
+\usepackage[hyperfootnotes=true,colorlinks=true,allcolors={blue}]{hyperref}
+\usepackage{indentfirst}
+\usepackage{dcolumn}
+\usepackage{nameref}
+\usepackage{placeins} % put this in your pre-amble
+\usepackage{flafter}  % put this in your pre-amble
+\usepackage{float} % to manage figure float
+\usepackage{authblk} % for co-author
+\usepackage{dirtytalk} % for inserting quotation
+\usepackage{siunitx} % for the \nombre command
+%\usepackage{cite}
+\usepackage{bookmark}
+%\usepackage{lmodern}
+%\usepackage{mathptmx} % for nice font
+%\fontfamily{cmss}
+\usepackage{mathtools}
+% \hypersetup{
+%   colorlinks=true,
+%   allcolors=blue
+% }
+
+\usepackage{threeparttable}
+\usepackage{booktabs, longtable}
+\usepackage{tabularx}
+\usepackage[singlelinecheck=false]{caption}
+% for source under image
+\usepackage{caption}
+%\newcommand{\source}[1]{\fontsize{7}{8}\selectfont Source: {#1}}
+\newcommand{\source}[1]{\caption*{\fontsize{7}{8}\selectfont Source: {#1}} }
+
+% for accessibility 
+\newcommand{\alt}[1]{\caption*{\fontsize{9}{11}\selectfont Alt text: {#1}} }
+
+
+%\input{../shared/statex}
+
+
+%\usepackage{amssymb} %maths
+%\usepackage{amsmath} %maths
+%\usepackage{siunitx} % using plus-minus instead of std
+\DeclareUnicodeCharacter{2212}{-} % Unicode U+2212 is MINUS SIGN, which is not set up by default with inputenc
+\DeclareUnicodeCharacter{2009}{~} % Unicode U+2212 is MINUS SIGN, which is not set up by default with inputenc{00A0}{~}
+
+\DeclareUnicodeCharacter{0080}{+} % Unicode U+2212 is MINUS SIGN, which is not set up by default with inputenc{00A0}{~}
+
+\DeclareUnicodeCharacter{0301}{-} % Unicode U+2212 is MINUS SIGN, which is not set up by default with inputenc{00A0}{~}
+
+\DeclareUnicodeCharacter{0301}{+} % Unicode U+2212 is MINUS SIGN, which is not set up by default with inputenc{00A0}{~}
+
+\DeclareUnicodeCharacter{0300}{-} % Unicode U+2212 is MINUS SIGN, which is not set up by default with inputenc{00A0}{~}
+
+\DeclareUnicodeCharacter{0300}{+} % Unicode U+2212 is MINUS SIGN, which is not set up by default with inputenc{00A0}{~}
+
+\DeclareUnicodeCharacter{001B}{-} % Unicode U+2212 is MINUS SIGN, which is not set up by default with inputenc{00A0}{~}
+
+% Count of words
+\usepackage{moreverb} % for verbatim ouput
+\immediate\write18{texcount  -inc -merge -nobib -sum -sub=section \jobname.tex > ./texcount.tex}
+\newcommand\wordcount{\verbatiminput{./texcount.tex}}
+
+% font family and size
+\usepackage{CormorantGaramond}
+%\usepackage[default]{gillius}
+
+%\usepackage{anyfontsize}
+%\fontsize{15}{18}\selectfont
+\usepackage[fontsize=13]{scrextend}
+%\usepackage[14pt]{extsizes}
+
+
+% page setup
+\usepackage{geometry} % for margin
+\geometry{
+  left=25mm,
+  right=25mm,
+  top=25mm,
+  bottom=25mm,
+  heightrounded,% better use it
+}
+
+
+\usepackage{url}
+\usepackage[style=apa,backend=biber,url=false,doi=false,natbib]{biblatex}
+\addbibresource{src/ref.bib}
