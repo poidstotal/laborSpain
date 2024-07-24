@@ -17,9 +17,9 @@ data[, age := gsub(" ", "", age)]
 
 
 ## recode ages into ageg
-data[age %in% c("16-24", "25-34" ), ageg := "Young(16-34)"]
-data[age %in% c("35-44", "45-54" ), ageg := "Adult(35-54)"]
-data[age  == "55+", ageg := "Older(55+)"]
+data[age %in% c("16-24", "25-34" ), ageg := factor( "Young(16-34)")]
+data[age %in% c("35-44", "45-54" ), ageg := factor("Adult(35-54)")]
+data[age  == "55+", ageg := factor("Older(55+)")]
 
 ## convert pop and wpx
 # assume 50 week per year
@@ -27,7 +27,7 @@ data[, whx := 50*whx]
 # total labour
 data[, lab := whx*wpx*pop]
 ## save for later use
-saveRDS(labdta, "./data/labdta.rds")
+saveRDS(data, "./data/data.rds")
 
 
 

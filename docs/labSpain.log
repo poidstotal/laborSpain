@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.29)  23 JUL 2024 16:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.29)  23 JUL 2024 16:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1124,31 +1124,31 @@ LaTeX Font Info:    Font shape `OT1/CormorantGaramond-LF/b/n' aliased to
 (Font)              `OT1/CormorantGaramond-LF/bold/n' on input line 1.
 LaTeX Font Info:    Font shape `OT1/CormorantGaramond-LF/bold/n' will be
 (Font)              scaled to size 13.0pt on input line 1.
-LaTeX Font Info:    Calculating math sizes for size <13> on input line 3.
+LaTeX Font Info:    Calculating math sizes for size <13> on input line 2.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 3.
+(Font)              size <6> substituted on input line 2.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <13> not available
-(Font)              size <12> substituted on input line 3.
+(Font)              size <12> substituted on input line 2.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <6.5> not available
-(Font)              size <6> substituted on input line 3.
+(Font)              size <6> substituted on input line 2.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <13> not available
-(Font)              size <12> substituted on input line 3.
+(Font)              size <12> substituted on input line 2.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <6.5> not available
-(Font)              size <6> substituted on input line 3.
+(Font)              size <6> substituted on input line 2.
 
 
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <13> not available
-(Font)              size <12> substituted on input line 3.
+(Font)              size <12> substituted on input line 2.
 
 )
 \tf@toc=\write4
@@ -1197,18 +1197,18 @@ Package logreq Info: Writing requests to 'labSpain.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31831 strings out of 476025
- 642016 string characters out of 5790017
+ 31832 strings out of 476025
+ 642025 string characters out of 5790017
  1863388 words of memory out of 5000000
- 51810 multiletter control sequences out of 15000+600000
+ 51811 multiletter control sequences out of 15000+600000
  544570 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,7n,109p,1333b,5177s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Bold.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Regular.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on labSpain.pdf (6 pages, 208678 bytes).
+Output written on labSpain.pdf (6 pages, 208850 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 155 compressed objects within 2 object streams
+ 192 PDF objects out of 1000 (max. 8388607)
+ 159 compressed objects within 2 object streams
  39 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 65 words of extra memory for PDF output out of 10000 (max. 10000000)
 
