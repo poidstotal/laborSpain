@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.29)  24 JUL 2024 15:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.29)  24 JUL 2024 15:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1184,13 +1184,12 @@ LaTeX Font Info:    Font shape `OT1/CormorantGaramond-LF/m/n' aliased to
 (Font)              `OT1/CormorantGaramond-LF/regular/n' on input line 4.
 LaTeX Font Info:    Font shape `OT1/CormorantGaramond-LF/regular/n' will be
 (Font)              scaled to size 6.5pt on input line 4.
- [3] [4]) (./chapts/3result.tex
-<../graph/wpx.png, id=88, 722.7pt x 289.08pt>
+ [3] [4]) [5] (./chapts/3result.tex
+<../graph/wpx.png, id=98, 722.7pt x 289.08pt>
 File: ../graph/wpx.png Graphic file (type png)
 <use ../graph/wpx.png>
 Package pdftex.def Info: ../graph/wpx.png  used on input line 5.
 (pdftex.def)             Requested size: 472.03123pt x 188.81284pt.
- [5]
 <../graph/whx.png, id=100, 722.7pt x 289.08pt>
 File: ../graph/whx.png Graphic file (type png)
 <use ../graph/whx.png>
@@ -1201,17 +1200,17 @@ File: ../graph/stx.png Graphic file (type png)
 <use ../graph/stx.png>
 Package pdftex.def Info: ../graph/stx.png  used on input line 19.
 (pdftex.def)             Requested size: 472.03123pt x 188.81284pt.
-) (./chapts/4outro.tex [6 <../graph/wpx.png> <../graph/whx.png>])
+) [6 <../graph/wpx.png> <../graph/whx.png>] [7 <../graph/stx.png>] (./chapts/4outro.tex)
 LaTeX Font Info:    Font shape `OT1/CormorantGaramond-LF/m/it' aliased to
-(Font)              `OT1/CormorantGaramond-LF/regular/it' on input line 79.
+(Font)              `OT1/CormorantGaramond-LF/regular/it' on input line 81.
 LaTeX Font Info:    Font shape `OT1/CormorantGaramond-LF/regular/it' will be
-(Font)              scaled to size 13.0pt on input line 79.
+(Font)              scaled to size 13.0pt on input line 81.
 
-Overfull \hbox (13.0874pt too wide) in paragraph at lines 79--79
+Overfull \hbox (13.0874pt too wide) in paragraph at lines 81--81
 [][]\OT1/CormorantGaramond-LF/regular/n/13 Fa[]^^Plde Gar-rido, J., Dap[]^^Pa Conde, M., V[]azquez V[]azquez, M., Ru[]^^Pz So-ri-ano, L., & V[]azquez Rodr[]^^Pguez,
  []
 
-[7{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cormorantgaramond/cgrm_k54atz.enc} <../graph/stx.png>] [8] (./labSpain.aux)
+[8{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cormorantgaramond/cgrm_k54atz.enc}] [9] (./labSpain.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.19997pt have occurred.
@@ -1224,18 +1223,18 @@ Package logreq Info: Writing requests to 'labSpain.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31868 strings out of 476025
- 642635 string characters out of 5790017
- 1862388 words of memory out of 5000000
+ 31869 strings out of 476025
+ 642641 string characters out of 5790017
+ 1863388 words of memory out of 5000000
  51837 multiletter control sequences out of 15000+600000
  544570 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,7n,109p,1333b,5177s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Bold.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/catharsis/cormorantgaramond/CormorantGaramond-Regular.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on labSpain.pdf (8 pages, 556109 bytes).
+Output written on labSpain.pdf (9 pages, 556385 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
+ 217 PDF objects out of 1000 (max. 8388607)
+ 175 compressed objects within 2 object streams
+ 45 named destinations out of 1000 (max. 500000)
  80 words of extra memory for PDF output out of 10000 (max. 10000000)
 
