@@ -26,6 +26,10 @@ data[age  == "55+", ageg := factor("Older(55+)")]
 data[, whx := 50*whx]
 # total labour
 data[, lab := whx*wpx*pop]
+
+## compute total populaiton by year, img and sex
+
+
 ## save for later use
 saveRDS(data, "./data/data.rds")
 
@@ -47,7 +51,4 @@ saveRDS(data, "./data/data.rds")
 
 
 
-## compute total populaiton by year, img and sex
-data[, tPop := sum(pop), by = .(year, sex, img)]
-## compute population structure as proxy for aging
-data[, pStr := pop/tPop]
+

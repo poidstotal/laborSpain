@@ -10,7 +10,7 @@ mygthemep <- theme_bw() +  theme(
     panel.border = element_rect(colour = NA, fill = NA),
     strip.background = element_blank(),
     strip.text.x = element_text(hjust = 0),
-    strip.text = element_text(size = 7)
+    strip.text = element_text(size = 8)
     
   )
 # mygcolor <- c(`young`= "green", `adult`= "blue" , `older`= "yellow" )
