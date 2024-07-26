@@ -1,2 +1,2 @@
-setwd("/Volumes/WorkSpace/ptmDrive/research/PhD/Docs/labSpain")
+setwd("/Volumes/WorkSpace/ptmDrive/postDoc/labSpain")
 

@@ -83,7 +83,7 @@ ggsave(file.path("./graph/whx.png"), plot, width = 10, height = 4)
 
 
 ########################
-## Hours worked
+## Hours stx
 ########################
 ## compute total populaiton by year, img and sex
 stxDta <-  data[, .(pop = sum(pop)), by = .(year, ageg, img)]

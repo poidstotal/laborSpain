@@ -29,7 +29,6 @@ data[, lab := whx*wpx*pop]
 
 ## compute total populaiton by year, img and sex
 
-
 ## save for later use
 saveRDS(data, "./data/data.rds")
 
