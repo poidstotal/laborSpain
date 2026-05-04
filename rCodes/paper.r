@@ -475,7 +475,7 @@ plot <- ggarrange(
 
 # dev.off()
 plot
-ggsave(file.path("resrc/labRate.pdf"), plot, width = 10, height = 3.5)
+ggsave(file.path("resrc/labRate.pdf"), plot)
 
 
 #####################

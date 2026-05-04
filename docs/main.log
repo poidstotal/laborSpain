@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.2)  3 MAY 2026 12:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.2)  3 MAY 2026 16:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1036,41 +1036,41 @@ Overfull \hbox (1.77515pt too wide) in paragraph at lines 11--12
  []
 
 [3] [4] [5]) (./chapts/2data.tex (../resrc/popSum.tex) [6]) (./chapts/3labor.tex [7] (../resrc/labSum.tex) [8]
-<../resrc/labPopChg.pdf, id=165, 722.7pt x 433.62pt>
+<../resrc/labPopChg.pdf, id=166, 722.7pt x 433.62pt>
 File: ../resrc/labPopChg.pdf Graphic file (type pdf)
 <use ../resrc/labPopChg.pdf>
-Package pdftex.def Info: ../resrc/labPopChg.pdf  used on input line 34.
+Package pdftex.def Info: ../resrc/labPopChg.pdf  used on input line 37.
 (pdftex.def)             Requested size: 472.03123pt x 283.21927pt.
  [9] [10 <../resrc/labPopChg.pdf>]
-<../resrc/labRate.pdf, id=181, 722.7pt x 252.945pt>
+<../resrc/labRate.pdf, id=183, 722.7pt x 252.945pt>
 File: ../resrc/labRate.pdf Graphic file (type pdf)
 <use ../resrc/labRate.pdf>
-Package pdftex.def Info: ../resrc/labRate.pdf  used on input line 47.
+Package pdftex.def Info: ../resrc/labRate.pdf  used on input line 50.
 (pdftex.def)             Requested size: 472.03123pt x 165.21124pt.
-) (./chapts/4contrib.tex [11 <../resrc/labRate.pdf>] (../resrc/effectMat.tex) [12] [13]
-<../resrc/labDecomp.pdf, id=208, 722.7pt x 433.62pt>
+) (./chapts/4contrib.tex [11 <../resrc/labRate.pdf>] [12] (../resrc/effectMat.tex) [13] [14]
+<../resrc/labDecomp.pdf, id=213, 722.7pt x 433.62pt>
 File: ../resrc/labDecomp.pdf Graphic file (type pdf)
 <use ../resrc/labDecomp.pdf>
-Package pdftex.def Info: ../resrc/labDecomp.pdf  used on input line 44.
+Package pdftex.def Info: ../resrc/labDecomp.pdf  used on input line 59.
 (pdftex.def)             Requested size: 472.03123pt x 283.21927pt.
- [14]) (./chapts/5outro.tex [15 <../resrc/labDecomp.pdf>] [16]) (./chapts/6annex.tex [17] [18] [19]
-<../resrc/wpx.png, id=295, 722.7pt x 289.08pt>
+ [15]) (./chapts/5outro.tex [16 <../resrc/labDecomp.pdf>] [17]) (./chapts/6annex.tex [18] [19] [20]
+<../resrc/wpx.png, id=300, 722.7pt x 289.08pt>
 File: ../resrc/wpx.png Graphic file (type png)
 <use ../resrc/wpx.png>
 Package pdftex.def Info: ../resrc/wpx.png  used on input line 57.
 (pdftex.def)             Requested size: 472.03123pt x 188.81284pt.
-<../resrc/whx.png, id=297, 722.7pt x 289.08pt>
+<../resrc/whx.png, id=302, 722.7pt x 289.08pt>
 File: ../resrc/whx.png Graphic file (type png)
 <use ../resrc/whx.png>
 Package pdftex.def Info: ../resrc/whx.png  used on input line 63.
 (pdftex.def)             Requested size: 472.03123pt x 188.81284pt.
- [20 <../resrc/wpx.png>]
-<../resrc/stx.png, id=304, 722.7pt x 289.08pt>
+ [21 <../resrc/wpx.png>]
+<../resrc/stx.png, id=309, 722.7pt x 289.08pt>
 File: ../resrc/stx.png Graphic file (type png)
 <use ../resrc/stx.png>
 Package pdftex.def Info: ../resrc/stx.png  used on input line 69.
 (pdftex.def)             Requested size: 472.03123pt x 188.81284pt.
-) [21 <../resrc/whx.png> <../resrc/stx.png>]
+) [22 <../resrc/whx.png> <../resrc/stx.png>]
 Overfull \hbox (9.54945pt too wide) in paragraph at lines 82--82
 \OT1/cmtt/m/n/13 boletin -[] economico / 2023 -[] t3 -[] articulo -[] 12 -[]-[] el -[] impacto -[] del -[] envejecimiento -[]
  []
@@ -1080,17 +1080,17 @@ Overfull \hbox (8.40657pt too wide) in paragraph at lines 82--82
 \OT1/cmr/m/n/13 ket Flows: Ev-i-dence from Spain''. In: \OT1/cmr/m/it/13 Eco-nomics: The Open-Access, Open-Assessment
  []
 
-[22]
+[23]
 Overfull \hbox (5.94171pt too wide) in paragraph at lines 82--82
 \OT1/cmr/m/n/13 anal-y-sis of an ag-ing Japan''. In: \OT1/cmr/m/it/13 Jour-nal of the Japanese and In-ter-na-tional Economies
  []
 
-[23]
+[24]
 Overfull \hbox (5.2194pt too wide) in paragraph at lines 82--82
 [][]\OT1/cmr/m/n/13 D^^S^^Paz-Gim^^Senez, Javier and Juli^^San D^^S^^Paz-Saavedra (2009). ``De-lay-ing re-tire-ment in Spain''.
  []
 
-[24] (./main.aux)
+[25] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
@@ -1100,18 +1100,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29761 strings out of 468482
- 591767 string characters out of 5442242
+ 29762 strings out of 468482
+ 591774 string characters out of 5442242
  1402644 words of memory out of 5000000
  58206 multiletter control sequences out of 15000+600000
  641533 words of font info for 87 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
  113i,10n,110p,1677b,2061s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></opt/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></opt/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></opt/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></opt/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></opt/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></opt/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></opt/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></opt/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (24 pages, 616962 bytes).
+Output written on main.pdf (25 pages, 619836 bytes).
 PDF statistics:
- 539 PDF objects out of 1000 (max. 8388607)
- 460 compressed objects within 5 object streams
- 104 named destinations out of 1000 (max. 500000)
+ 545 PDF objects out of 1000 (max. 8388607)
+ 465 compressed objects within 5 object streams
+ 105 named destinations out of 1000 (max. 500000)
  199 words of extra memory for PDF output out of 10000 (max. 10000000)
 
