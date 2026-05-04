@@ -90,14 +90,15 @@ DecompContinuous <-
 # used aluf and ueCanada
 ###################################################################
 mygthemep <- theme_bw() +  theme(
-    legend.position = "top", 
+    legend.position = "bottom", 
     legend.title = element_blank(),
     panel.grid.minor = element_blank(),
     panel.grid = element_line(linetype = "dotted"),
     panel.border = element_rect(colour = NA, fill = NA),
     strip.background = element_blank(),
     strip.text.x = element_text(hjust = 0),
-    strip.text = element_text(size = 8)
+    legend.text = element_text(size = facet_text_size),
+    strip.text = element_text(size = facet_text_size)
     
   )
 mygcolor <- c("#021250", "#8B0D11", "#FCB507")
@@ -115,3 +116,7 @@ sepline2 <- ggplot() +
     scale_x_continuous(limits = c(0, 3), expand = c(0, 0)) +
     scale_y_continuous(limits = c(0, 1), expand = c(0, 0)) +
     theme_void()
+
+
+# default font to apply 
+facet_text_size <- theme_get()$plot.title$size

@@ -1,6 +1,7 @@
 # base package
 usePackages(pkgs)
-usePackages(c("patchwork", "Hmisc", "ggpubr"))
+usePackages(c("htmlTable", "rmarkdown", "patchwork", "Hmisc", "ggpubr"))
+# usePackages("httpgd")
 ## see local.r for folder settings
 source("./rCodes/function.r")
 # data <- readRDS("./data/data.rds")
@@ -49,7 +50,8 @@ popSum <- dta[
 ]
 
 # Add % of 55+ in population
-popSum[,
+popSum[
+  ,
   age := 100 * age / pop
 ]
 
@@ -76,11 +78,11 @@ popSum <- dcast(
 )
 
 
-
 # Order rows
 indrk <- c("pop", "wpx", "whx", "age")
 
-popSum[,
+popSum[
+  ,
   ind := factor(ind, levels = indrk)
 ]
 
@@ -161,9 +163,6 @@ make_tabular_star(
 )
 
 
-
-
-
 ########################
 ## Participation
 ########################
@@ -172,29 +171,29 @@ wpxDta <- data[, .(wpx = 100 * wtd.mean(wpx, pop)), by = .(year, ageg, nation)]
 
 # create plot
 plot <- ggplot(wpxDta, mapping = aes(
-    y = wpx, x = year, color = nation, linetype = nation,
-    group = nation, shape = nation
-    )) +
-    mygthemep + 
-    geom_line(linewidth = 1) +
-    facet_grid(cols = vars(ageg)) +
-    scale_y_continuous(
+  y = wpx, x = year, color = nation, linetype = nation,
+  group = nation, shape = nation
+)) +
+  mygthemep +
+  geom_line(linewidth = 1) +
+  facet_grid(cols = vars(ageg)) +
+  scale_y_continuous(
     breaks = seq(0, 100, by = 20),
     limits = c(0, 101),
-    sec.axis = dup_axis()  # Add secondary axis as duplicate
-    ) +
-    scale_x_continuous(
+    sec.axis = dup_axis() # Add secondary axis as duplicate
+  ) +
+  scale_x_continuous(
     breaks = seq(2005, 2025, by = 5),
     limits = c(2005, 2025)
-    ) +
-    labs(y = "%") +
+  ) +
+  labs(y = "%") +
   ## separator
-    patchwork::inset_element(sepline, left = -0.05, bottom = 0.1, right = 1.05, top = 0.9)
+  patchwork::inset_element(sepline, left = -0.05, bottom = 0.1, right = 1.05, top = 0.9)
 
 # dev.off()
 plot
 ## save the plot
-ggsave(file.path("./resrc/wpx.png"), plot, width = 10, height = 4)
+ggsave(file.path("./resrc/wpx.pdf"), plot, device = cairo_pdf, width = 10, height = 4)
 
 
 ########################
@@ -206,67 +205,67 @@ whxDta <- data[, .(whx = wtd.mean(whx, pop)), by = .(year, ageg, nation)]
 
 # create plot
 plot <- ggplot(whxDta, mapping = aes(
-    y = whx, x = year, color = nation, linetype = nation,
-    group = nation, shape = nation
-    )) +
-    mygthemep + 
-    geom_line(linewidth = 1) +
-    facet_grid(cols = vars(ageg)) +
-    scale_y_continuous(
-        breaks=seq(1600,2600,by=200), 
-        limits = c(1600,2600),
-        name = "annual hours",
-        sec.axis = sec_axis(~ ./50, breaks=seq(32,52,by=4), name = "weekly hours")) +
-    scale_x_continuous(
-        breaks = seq(2005, 2025, by = 5),
-        limits = c(2005, 2025)
-    ) +
+  y = whx, x = year, color = nation, linetype = nation,
+  group = nation, shape = nation
+)) +
+  mygthemep +
+  geom_line(linewidth = 1) +
+  facet_grid(cols = vars(ageg)) +
+  scale_y_continuous(
+    breaks = seq(1600, 2600, by = 200),
+    limits = c(1600, 2600),
+    name = "annual hours",
+    sec.axis = sec_axis(~ . / 50, breaks = seq(32, 52, by = 4), name = "weekly hours")
+  ) +
+  scale_x_continuous(
+    breaks = seq(2005, 2025, by = 5),
+    limits = c(2005, 2025)
+  ) +
   ## separator
-    patchwork::inset_element(sepline, left = -0.05, bottom = 0.1, right = 1.05, top = 0.9)
+  patchwork::inset_element(sepline, left = -0.05, bottom = 0.1, right = 1.05, top = 0.9)
 
 # dev.off()
 plot
 ## save the plot
-ggsave(file.path("./resrc/whx.png"), plot, width = 10, height = 4)
-
+ggsave(file.path("./resrc/whx.pdf"), plot, device = cairo_pdf, width = 10, height = 4)
 
 
 ########################
 ## Age stx
 ########################
 ## compute total populaiton by year, nation and sex
-stxDta <-  data[, .(pop = sum(pop)), by = .(year, ageg, nation)]
+stxDta <- data[, .(pop = sum(pop)), by = .(year, ageg, nation)]
 ## total pop nation + native
 stxDta[, tPop := sum(pop), by = .(year, ageg)]
 ## compute population structure as proxy for aging
-stxDta <-  stxDta[, .(stx = 100*pop/tPop), by = .(year, ageg, nation)]
+stxDta <- stxDta[, .(stx = 100 * pop / tPop), by = .(year, ageg, nation)]
 
 # create plot
 # create plot
 plot <- ggplot(stxDta, mapping = aes(
-    y = stx, x = year, color = nation, linetype = nation,
-    group = nation, shape = nation
-    )) +
-    mygthemep + 
-    geom_line(linewidth = 1) +
-    facet_grid(cols = vars(ageg)) +
-    scale_y_continuous(
+  y = stx, x = year, color = nation, linetype = nation,
+  group = nation, shape = nation
+)) +
+  mygthemep +
+  geom_line(linewidth = 1) +
+  facet_grid(cols = vars(ageg)) +
+  scale_y_continuous(
     breaks = seq(0, 100, by = 20),
     limits = c(0, 101),
-    sec.axis = dup_axis()  # Add secondary axis as duplicate
-    ) +
-    scale_x_continuous(
+    sec.axis = dup_axis() # Add secondary axis as duplicate
+  ) +
+  scale_x_continuous(
     breaks = seq(2005, 2025, by = 5),
     limits = c(2005, 2025)
-    ) +
-    labs(y = "%") +
+  ) +
+  labs(y = "%") +
   ## separator
-    patchwork::inset_element(sepline, left = -0.05, bottom = 0.1, right = 1.05, top = 0.9)
+  patchwork::inset_element(sepline, left = -0.05, bottom = 0.1, right = 1.05, top = 0.9)
 
 # dev.off()
 plot
 ## save the plot
-ggsave(file.path("./resrc/stx.png"), plot, width = 10, height = 4)
+ggsave(file.path("./resrc/stx.pdf"), plot, device = cairo_pdf, width = 10, height = 4)
 
 
 #################################################################
@@ -280,33 +279,28 @@ ggsave(file.path("./resrc/stx.png"), plot, width = 10, height = 4)
 labchg <- data[, .(lab = sum(lab)), by = .(year, nation)]
 
 # convert to million of person hours per year using 50 weeks and 40 hours per week
-# labchg[, lab := lab / (50 * 40 * 1e6)]
-labchgPlot <- copy(labchg[nation %in% c("Spanish", "Foreign")])
-labchgPlot[, nation := factor(nation, levels = c("Spanish", "Foreign"))]
+labchg[, lab := lab / (50 * 40 * 1e6)]
+labchgPlot <- copy(labchg[nation %in% c("Foreign", "Spanish")])
+labchgPlot[, nation := factor(nation, levels = c("Foreign", "Spanish"))]
 labchgMax <- ceiling(max(labchgPlot[, sum(lab), by = year]$V1, na.rm = TRUE) / 5) * 5
 
 plot <- ggplot(labchgPlot, aes(x = year, y = lab, fill = nation)) +
-    mygthemep +
-    geom_area(color = "white", linewidth = 0.2, position = "stack") +
-    scale_y_continuous(
-        breaks = seq(0, labchgMax, by = 5)
-    ) +
-    scale_x_continuous(
-        breaks = seq(2005, 2025, by = 5)
-    ) +
-    coord_cartesian(xlim = range(labchgPlot$year), ylim = c(0, labchgMax)) +
-    labs(x = NULL, y = "Million FTE workers") +
-    scale_fill_brewer(palette = "Set2") 
+  mygthemep +
+  geom_area(color = "white", linewidth = 0.2, position = "stack") +
+  scale_x_continuous(
+    breaks = seq(2005, 2025, by = 5)
+  ) +
+  coord_cartesian(xlim = range(labchgPlot$year), ylim = c(0, labchgMax)) +
+  labs(x = NULL, y = "Million FTE workers") +
+  scale_fill_manual(values = c("Foreign" = mygcolor[3], "Spanish" = mygcolor[2]))
 
 plot
 
-
-
-ggsave(file.path("./resrc/labchg.png"), plot, width = 10, height = 4)
+ggsave(file.path("./resrc/labchg.pdf"), plot, device = cairo_pdf, width = 10, height = 4)
 
 
 #####################
-#  Lab Donot plot 
+#  Lab Donot plot
 #####################
 
 
@@ -351,14 +345,21 @@ plotA <- ggplot(pdta[year == 2005, ], aes(x = 2, y = value, fill = ageg)) +
   geom_text(
     aes(label = value),
     color = "white",
-    position = position_stack(vjust = 0.5), size = 3
+    position = position_stack(vjust = 0.5)
   ) +
   scale_fill_manual(values = mygcolor) +
   theme_void() +
   xlim(0.5, 2.5) +
   theme(
     legend.position = "bottom", legend.title = element_blank(),
-    strip.text.y.left = element_text(angle = 0, margin = margin(0, 2, 0, 2, "pt"))
+    legend.text = element_text(size = facet_text_size),
+    strip.text = element_text(size = facet_text_size),
+    #strip.text.y = element_text(size = facet_text_size, angle = 0),
+    #strip.text.y.left = element_text(size = facet_text_size, angle = 0),
+    strip.placement = "outside",
+    strip.clip = "off",
+    plot.margin = margin(5.5, 5.5, 5.5, 24, "pt"),
+    aspect.ratio = 1 / 1
   )
 
 
@@ -377,14 +378,16 @@ plotB <- ggplot(pdta[year == 2025, ], aes(x = 2, y = value, fill = ageg)) +
   geom_text(
     aes(label = value),
     color = "white",
-    position = position_stack(vjust = 0.5), size = 3
+    position = position_stack(vjust = 0.5)
   ) +
   scale_fill_manual(values = mygcolor) +
   theme_void() +
   xlim(0.5, 2.5) +
   theme(
     legend.position = "bottom", legend.title = element_blank(),
-    strip.text.y.left = element_text(angle = 0)
+    legend.text = element_text(size = facet_text_size),
+    strip.text = element_text(size = facet_text_size),
+    aspect.ratio = 1 / 1
   )
 
 # plot for diff
@@ -402,24 +405,24 @@ plotC <- ggplot(pdta_change, aes(x = ageg, y = value, fill = ageg)) +
   geom_text(
     aes(label = value),
     color = "white",
-    position = position_stack(vjust = 0.5), size = 3
+    position = position_stack(vjust = 0.5)
   ) +
   scale_fill_manual(values = mygcolor) +
   theme_void() +
   theme(
     legend.position = "bottom", legend.title = element_blank(),
+    legend.text = element_text(size = facet_text_size),
+    strip.text = element_text(size = facet_text_size),
     aspect.ratio = 1 / 1
   )
 
-usePackages("ggpubr")
+# usePackages("ggpubr")
 
-cplot <- ggarrange(plotA, plotB, plotC, legend = "bottom", common.legend = TRUE, ncol = 3, widths = c(1.3, 1, 1))
+cplot <- ggarrange(plotA, plotB, plotC, legend = "bottom", common.legend = TRUE, ncol = 3, widths = c(1.7, 1, 1))
 # dev.off()
 cplot
-
 # export
-ggsave(file.path("resrc/labPopChg.pdf"), cplot, width = 10, height = 6)
-
+ggsave(file.path("resrc/labPopChg.pdf"), cplot, device = cairo_pdf, width = 10, height = 6, units = "in")
 
 
 #####################
@@ -438,7 +441,6 @@ plot_spanish <- ggplot(pdta[nation == "Spanish"], mapping = aes(
   group = ageg, shape = ageg
 )) +
   mygthemep +
-  theme(plot.title = element_text(size = 7, hjust = 0.5)) +
   # geom_line(size = 1)+
   geom_point(size = 2) +
   geom_smooth(aes(y = value), formula = y ~ poly(x, 7), method = lm, alpha = 0.3, se = F) +
@@ -455,7 +457,6 @@ plot_foreign <- ggplot(pdta[nation == "Foreign"], mapping = aes(
   group = ageg, shape = ageg
 )) +
   mygthemep +
-  theme(plot.title = element_text(size = 7, hjust = 0.5)) +
   # geom_line(size = 1)+
   geom_point(size = 2) +
   geom_smooth(aes(y = value), formula = y ~ poly(x, 7), method = lm, alpha = 0.3, se = F) +
@@ -469,17 +470,17 @@ plot_foreign <- ggplot(pdta[nation == "Foreign"], mapping = aes(
 
 plot <- ggarrange(
   plot_spanish, plot_foreign,
-  legend = "top", common.legend = TRUE,
+  legend = "bottom", common.legend = TRUE,
   ncol = 2, widths = c(1, 1)
 )
 
 # dev.off()
 plot
-ggsave(file.path("resrc/labRate.pdf"), plot)
+ggsave(file.path("resrc/labRate.pdf"), plot, device = cairo_pdf)
 
 
 #####################
-#  Lab Summary table 
+#  Lab Summary table
 #####################
 labSumBase <- data[
   year %in% c(2005, 2025),
@@ -556,7 +557,7 @@ setorder(labSum, row_id)
 labSum[, row_id := NULL]
 labSum[, c("Spanish", "Foreign", "Combined") :=
   lapply(.SD, round, 2),
-  .SDcols = c("Spanish", "Foreign", "Combined")
+.SDcols = c("Spanish", "Foreign", "Combined")
 ]
 
 setcolorder(labSum, c("row", "Spanish", "Foreign", "Combined"))
@@ -593,8 +594,6 @@ make_tabular_star(
 )
 
 
-
-
 #################################################################
 ## Decomposition
 #################################################################
@@ -612,7 +611,7 @@ lMat <- data[, .(year, pop, wpx, whx, age, nation)]
 # add totoal population by year
 lMat[, tpop := sum(pop), by = .(year, nation)]
 # add stx
-lMat[, stx := pop/tpop, by = .(year, nation)]
+lMat[, stx := pop / tpop, by = .(year, nation)]
 # build the effect table by calling getEffect()
 etable <- getEffect(lMat)
 
@@ -626,10 +625,6 @@ saveRDS(etable, file.path("data/etable.rds"))
 etable <- readRDS(file.path("data/etable.rds"))
 # reshape to long format
 eMatL <- melt.data.table(etable, measure.vars = c("tpop", "stx", "wpx", "whx"), variable.name = "comp")
-
-
-
-
 
 
 #####################
@@ -666,7 +661,6 @@ setorder(effectMat, nation, comp)
 
 effectMat <- dcast(effectMat, nation + comp ~ period, value.var = "value")
 effectMat <- effectMat[, .(nation, comp, `p`, `p1`, `p2`, `p3`, `p4`)]
-
 
 
 #####################
@@ -754,7 +748,6 @@ writeLines(effectMatLines, effectMatFile)
 # extract plot data
 
 
-
 # round(sum(eMatL$value) / (50 * 40 * 1e6), 2)
 
 # extract and sum over years
@@ -774,35 +767,34 @@ fa[, nation := factor(nation, levels = c("Spanish", "Foreign", "Combined"))]
 # plot start here
 plot <- ggplot(fa[value != 0, ], mapping = aes(
   y = value, x = comp, group = ageg,
-  colour = ageg, fill = ageg, linetype = ageg)) + 
-mygthemep + theme(
+  colour = ageg, fill = ageg, linetype = ageg
+)) +
+  mygthemep +
+  theme(
     panel.spacing.x = unit(2, "lines"),
     aspect.ratio = 1.5 / 1,
   ) +
   geom_col(na.rm = TRUE, color = "black", alpha = 0.7) +
   geom_hline(yintercept = 0, size = 0.3, color = "gray80") +
   labs(x = NULL, y = "% contributed") +
-  facet_grid(cols = vars(nation))+
+  facet_grid(cols = vars(nation)) +
   scale_colour_manual(values = mygcolor[1:3]) +
   scale_fill_manual(values = mygcolor[1:3]) +
   patchwork::inset_element(sepline2, left = -0.025, bottom = 0.1, right = 1.025, top = 0.9)
 
 
-
 # dev.off()
 plot
 # save the plot
-ggsave(file.path("resrc/labDecomp.pdf"), plot, width = 10, height = 6)
-
-
+ggsave(file.path("resrc/labDecomp.pdf"), plot, device = cairo_pdf, width = 10, height = 6)
 
 
 #####################
-#  LabCDQ 
+#  LabCDQ
 #####################
 
 
-test <-readRDS(file = file.path("/workData/workSpace/ptmDrive/phdWorks/myPhD/rCodes/Article2/eMatL.rds")) # Load ddecom before
+test <- readRDS(file = file.path("/workData/workSpace/ptmDrive/phdWorks/myPhD/rCodes/Article2/eMatL.rds")) # Load ddecom before
 
 # extract and sum over years
 fa <- test[, .(value = sum(value)), by = c("immig", "ageg", "comp")]
@@ -813,17 +805,20 @@ fa <- fa[, value := 100 * value / tLab]
 
 ggplot(fa[value != 0, ], mapping = aes(
   y = value, x = comp, group = ageg,
-  colour = ageg, fill = ageg, linetype = ageg)) + 
-mygthemep + theme(
+  colour = ageg, fill = ageg, linetype = ageg
+)) +
+  mygthemep +
+  theme(
+    legend.title = element_blank(),
+    legend.text = element_text(size = facet_text_size),
     panel.spacing.x = unit(2, "lines"),
     aspect.ratio = 1.5 / 1,
   ) +
   geom_col(na.rm = TRUE, color = "black", alpha = 0.7) +
   geom_hline(yintercept = 0, size = 0.3, color = "gray80") +
   labs(x = NULL, y = "% contributed") +
-  facet_grid(cols = vars(immig))+
+  facet_grid(cols = vars(immig)) +
   scale_colour_manual(values = mygcolor[1:3])
-
 
 
 #################################################################
@@ -833,7 +828,6 @@ mygthemep + theme(
 # Net effect of immigration vs population aging vs behavoir
 
 eMatL
-
 
 
 #####################
