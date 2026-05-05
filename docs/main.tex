@@ -1,5 +1,5 @@
-\RequirePackage{fix-cm}
-\documentclass{article}
+%\RequirePackage{fix-cm}
+\documentclass[12pt,a4paper]{article}
 \input{preambule.tex}
 
 
@@ -21,17 +21,15 @@
 
 \newcommand{\affiliationA}{\@myfnsymbol{1}}
 \newcommand{\affiliationB}{\@myfnsymbol{2}}
-\newcommand{\affiliationC}{\@myfnsymbol{3}}
-\newcommand{\equalcontributor}{\@myfnsymbol{4}}
-\newcommand{\correspondingA}{\@myfnsymbol{5}}
+
 \makeatother
 
 \title{\textbf{Estimating the Influence of Demographic Ageing and Migration to the Spanish Aggregate Labour Supply}}
 
 \author{
-  Gilbert Montcho\textsuperscript{\affiliationA,\equalcontributor},
-  Alejandro Steven Fonseca-Zendejas\textsuperscript{\affiliationB,\equalcontributor,\correspondingA},
-  Marcel Mérrete\textsuperscript{\affiliationC,\equalcontributor}
+  Gilbert Montcho\textsuperscript{\affiliationA}\\
+  Alejandro Steven Fonseca-Zendejas\textsuperscript{\affiliationB}\\
+  Marcel Mérrete\textsuperscript{\affiliationA}
 }
 
 \begin{document}
@@ -41,11 +39,8 @@
 \maketitle
 
 % Layout the notes in order
-\footnotetext[1]{Department of Demography, University of Montreal, Montreal, Quebec, Canada}%
+\footnotetext[1]{Department of Economics, University of Ottawa, Ottawa, Quebec, Canada}%
 \footnotetext[2]{Department of Economics, Universidad Loyola Andalucía, Seville, Spain}%
-\footnotetext[3]{Department of Economics, University of Ottawa, Ontario, Canada}%
-\footnotetext[4]{All authors contributed equally}%
-\footnotetext[5]{Corresponding author: asfonseca@uloyola.es}%
 
 \setcounter{footnote}{0}% Restart footnote counter
 % Footnotes for rest of document uses \fnsymbol 
@@ -54,11 +49,7 @@
 \input{./chapts/0abstract}
 \newpage
   % show table of content on esparate page
-  {\fontsize{13pt}{13}
-    \selectfont
-      \tableofcontents
-  }
-  
+\tableofcontents
   % load content
   \newpage
 
@@ -69,12 +60,6 @@
 \input{./chapts/4contrib}
 \input{./chapts/5outro}
 \input{./chapts/6annex}
-
-
-
-
-
-
 
 % reference
 \section*{References}
