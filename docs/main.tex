@@ -2,28 +2,6 @@
 \documentclass[12pt,a4paper]{article}
 \input{preambule.tex}
 
-
-\makeatletter
-\newcommand{\myfnsymbol}[1]{%
-  \expandafter\@myfnsymbol\csname c@#1\endcsname
-}
-% Mapping of how the symbols will be interpreted sequentially
-\newcommand{\@myfnsymbol}[1]{%
-  \ifcase #1
-    % 0
-  \or 1% 1
-  \or 2% 2
-  \or 3% 3
-  \or \TextOrMath{\textasteriskcentered}{*}% 4
-  \or \TextOrMath{\textdagger}{\dagger}% 5
-  \fi
-}
-
-\newcommand{\affiliationA}{\@myfnsymbol{1}}
-\newcommand{\affiliationB}{\@myfnsymbol{2}}
-
-\makeatother
-
 \title{\textbf{Estimating the Influence of Demographic Ageing and Migration to the Spanish Aggregate Labour Supply}}
 
 \author{
@@ -48,10 +26,10 @@
 
 \input{./chapts/0abstract}
 \newpage
-  % show table of content on esparate page
+% show table of content on esparate page
 \tableofcontents
-  % load content
-  \newpage
+% load content
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%
 \input{./chapts/1intro}

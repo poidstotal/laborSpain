@@ -1,0 +1,3 @@
+$success_cmd = 'sh -c "texcount -inc -merge -nobib -sum -sub=section %T | tee ./texcount.txt"';
+
+$clean_ext .= ' texcount.txt';

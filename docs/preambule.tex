@@ -63,3 +63,23 @@
 ]{biblatex}
 \addbibresource{citations.bib}
 
+
+\makeatletter
+\newcommand{\myfnsymbol}[1]{%
+  \expandafter\@myfnsymbol\csname c@#1\endcsname
+}
+% Mapping of how the symbols will be interpreted sequentially
+\newcommand{\@myfnsymbol}[1]{%
+  \ifcase #1
+    % 0
+  \or 1% 1
+  \or 2% 2
+  \or 3% 3
+  \or \TextOrMath{\textasteriskcentered}{*}% 4
+  \or \TextOrMath{\textdagger}{\dagger}% 5
+  \fi
+}
+
+\newcommand{\affiliationA}{\@myfnsymbol{1}}
+\newcommand{\affiliationB}{\@myfnsymbol{2}}
+\makeatother

@@ -1,0 +1,22 @@
+File: /workData/workSpace/ptmDrive/postDoc/labSpain/docs/main.tex
+Encoding: utf8
+Sum count: 5915
+Words in text: 5451
+Words in headers: 117
+Words outside text (captions, etc.): 262
+Number of headers: 25
+Number of floats/tables/figures: 10
+Number of math inlines: 81
+Number of math displayed: 4
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  204+15+17 (2/0/0/0) _top_
+  1299+16+0 (4/0/0/0) Section: Introduction
+  360+4+55 (1/1/0/0) Section: Data sources and descriptives
+  848+20+93 (4/3/16/1) Section: The labour supply in Spain}\label{sec:lab_method
+  1053+21+45 (4/2/21/0) Section: Decomposition of labour-supply change
+  742+25+0 (4/0/15/0) Section: Implication discussion
+  123+1+0 (1/0/0/0) Section: Conclusion
+  822+14+52 (4/4/29/3) Section: Annexes
+  0+1+0 (1/0/0/0) Section: References
+
